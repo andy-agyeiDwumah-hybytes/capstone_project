@@ -18,7 +18,7 @@ VocabVault is a React-based web application designed to help users expand their 
 ## Getting Started
 
 1. Clone the repository: <br>
-   `git clone `
+   `git clone https://github.com/andy-agyeiDwumah-hybytes/capstone_project.git`
 
 2. Install dependencies: <br>
    `npm install`
