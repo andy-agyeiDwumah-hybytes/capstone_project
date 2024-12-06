@@ -1,0 +1,82 @@
+section.section {
+    padding-bottom: 15em;
+}
+
+div.abouth2Wrapper {
+    margin-bottom: 6rem;
+}
+
+div.paraAndImageWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.paraAndImgWrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15rem;
+}
+
+div.aboutImgWrapper {
+    background-image: url("../../assets/words_about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35%;
+    height: 25em;
+    box-shadow: 1px 1px 5px var(--black);
+}
+
+div.paraAndImgWrapper > div:last-child {
+    width: 50%;
+}
+
+p.aboutText {
+    font-size: 1.2rem;
+}
+
+p.aboutText::first-letter {
+    font-size: 180%;
+    font-weight: 600;
+}
+
+div.h3Wrapper {
+    text-align: center;
+    padding: 8em 0;
+}
+
+h3.secondaryHeadings {
+    font-size: 3.2rem;
+}
+
+h3.secondaryHeadings + p {
+    font-size: 1.1rem;
+}
+
+div.h3Wrapper[data-content="platform database"] {
+    margin-bottom: 12rem;
+}
+
+hr.horizontalLine {
+    width: 50%;
+}
+
+/* Wrap in media query to make sure that it only applies when the user preference allows motion */
+@media (prefers-reduced-motion: no-preference) {
+    div.h3Wrapper {
+        opacity: 0;
+        scale: 0.9;
+        animation: fade-in linear forwards;
+        /* View - when the element enters the viewport */
+        animation-timeline: view();
+        /* Section to start animating when they are xpx away from the bottom of the viewport */
+        /* Finish animation when they are xx% away */
+        animation-range: 1px 45%;
+    }
+
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+}

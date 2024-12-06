@@ -1,0 +1,58 @@
+form.form {
+    text-align: center;
+    padding: 2em 0;
+    margin-bottom: 5rem;
+}
+
+section.section {
+    /* Important: allows section to take up full height of its parent container */
+    /* Without this it will only expand to fit their content */
+    flex-grow: 1;
+}
+
+input.searchInput {
+    padding: 1em 1.5em;
+    border-radius: 10px;
+}
+
+div.resultsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 2em;
+    padding-bottom: 10em;
+
+    & > div {
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px var(--black);
+        background-color: #FCFFEB;
+    }
+}
+
+div.errorLoadingContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p.loadingErrorText {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3.heading {
+    font-size: 2rem;
+}
+
+.capitaliseText {
+    text-transform: capitalize;
+}
+
+p.searchWord {
+    font-size: 2rem;
+}
+
+.list > li {
+    margin-bottom: 0.8em;
+}

@@ -1,0 +1,81 @@
+:root {
+  --h2WrapperColour : #070707;
+  --black: #000;
+  --headerFooterColour: #1d1b1b;
+  --white: #fff;
+  --red: #FF1B1C;
+  --backgroundWhite: #F4F3EE;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+div#root {
+  margin: 0;
+}
+
+section.section {
+  background-color: var(--backgroundWhite);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* Targets current page the user is on - Navlinks components have active class by default */
+menu > li > a.active {
+  color: var(--red);
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+p {
+  line-height: 2.5;
+  letter-spacing: 1px;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+/* Used to align content in the center */
+.setPaddingInline {
+  padding-inline: 4em;
+}
+
+/* Keeps footer at the bottom */
+main.mainWrapper { 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+main.mainWrapper > div:first-child {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+/* End keeps footer at the bottom  */
+
+div.h2Wrapper {
+  background-color: var(--h2WrapperColour);
+  color: var(--white);
+  padding: 1em 0;
+  box-shadow: 1px 1px 10px var(--h2WrapperColour);
+  text-align: center;
+}

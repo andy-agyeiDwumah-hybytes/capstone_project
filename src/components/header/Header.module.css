@@ -1,0 +1,30 @@
+header.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Padding inline is set in 'index.css' */
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: var(--headerFooterColour);
+}
+
+img.headerLogo {
+    width: 210px;
+}
+
+menu.headerMenu > li {
+    display: inline-block;
+}
+
+menu.headerMenu > li:not(:last-child) {
+    margin-right: 2.8em;
+}
+
+a.headerLinks {
+    font-size: 1.2rem;
+    color: var(--white);
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

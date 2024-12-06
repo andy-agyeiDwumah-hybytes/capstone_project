@@ -1,0 +1,8 @@
+footer.footerWrapper {
+    /* Padding inline is set in 'index.css' */
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    background-color: var(--headerFooterColour);
+    color: var(--white);
+    font-size: 1rem;
+}

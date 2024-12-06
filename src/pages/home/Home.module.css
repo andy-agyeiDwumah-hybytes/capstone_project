@@ -1,0 +1,33 @@
+section.hero {
+    background-image: url("../../assets/hero-img.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    place-content: center;
+    text-align: center;
+}
+
+section.overlay {
+    border-image: fill 1 linear-gradient(rgba(255 255 255 / 0.6), rgba(0 0 0 / 0.7));
+}
+
+div.textContentWrapper > h1 {
+    font-size: 5.5rem;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px var(--black);
+    margin-bottom: 0.2em;
+}
+
+div.textContentWrapper > p {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+}
+
+button.heroBtn {
+    font-size: 1.2rem;
+    background: conic-gradient(var(--red), var(--black) 180deg);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.5em;
+}
