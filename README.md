@@ -9,7 +9,7 @@ VocabVault is a React-based web application designed to help users expand their 
 
 - **Currently working on making the website responsive and adding improved form validation for user authentication.**
 
-## Prerequisties
+## Prerequisites
 
 - Node.js (v14 or later)
 - npm or yarn package manager
