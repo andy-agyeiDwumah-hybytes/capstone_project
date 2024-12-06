@@ -1,21 +1,27 @@
-# React Capstone Project
+# React Capstone Project 💥
 
 VocabVault is a React-based web application designed to help users expand their vocabulary.
 
-## Features
+## Features ✨
 
 - **User Authentication**: Sign up, log in, and log out functionality with persistent sessions.
 - **Search Words**: Search for specific words and retrieve detailed information.
 
 - **Currently working on making the website responsive and adding improved form validation for user authentication.**
 
-## Prerequisites
+## The User Interface 🔍
+
+### Home page:
+
+![Screenshot 2024-12-06 221009](https://github.com/user-attachments/assets/15807757-15d9-43f8-acd1-0c181c11cc4e)
+
+## Prerequisites ❗
 
 - Node.js (v14 or later)
 - npm or yarn package manager
 - Sign up with [RapidAPI](https://rapidapi.com/dpventures/api/wordsapi/pricing) to get your API key
 
-## Getting Started
+## Getting Started ✅
 
 1. Clone the repository: <br>
    `git clone https://github.com/andy-agyeiDwumah-hybytes/capstone_project.git`
