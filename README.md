@@ -20,6 +20,7 @@ VocabVault is a React-based web application designed to help users expand their 
 - Node.js (v14 or later)
 - npm or yarn package manager
 - Sign up with [RapidAPI](https://rapidapi.com/dpventures/api/wordsapi/pricing) to get your API key
+- Subscribe to 'WordsAPI' on RapidAPI
 
 ## Getting Started ✅
 
