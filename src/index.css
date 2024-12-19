@@ -18,11 +18,12 @@ html {
 }
 
 body,
-div#root {
-  margin: 0;
+#root {
+  margin: 0 auto;
+  max-width: 1800px;
 }
 
-section.section {
+.section {
   background-color: var(--backgroundWhite);
 }
 
@@ -51,20 +52,15 @@ button {
   line-height: 2;
 }
 
-/* Used to align content in the center */
-.setPaddingInline {
-  padding-inline: 4em;
-}
-
 /* Keeps footer at the bottom */
-main.mainWrapper { 
+.mainWrapper { 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
 }
 
-main.mainWrapper > div:first-child {
+.mainWrapper > div:first-child {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -72,10 +68,23 @@ main.mainWrapper > div:first-child {
 }
 /* End keeps footer at the bottom  */
 
-div.h2Wrapper {
+.h2Wrapper {
   background-color: var(--h2WrapperColour);
   color: var(--white);
   padding: 1em 0;
   box-shadow: 1px 1px 10px var(--h2WrapperColour);
   text-align: center;
+}
+
+/* setPaddingInline - Used to align content in the center */
+@media (width >= 280px) {
+  .setPaddingInline {
+      padding-inline: 1.5em;
+    }
+}
+
+@media (width >= 768px) {
+  .setPaddingInline {
+      padding-inline: 4em;
+    }
 }

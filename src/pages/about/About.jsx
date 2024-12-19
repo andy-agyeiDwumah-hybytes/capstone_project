@@ -9,7 +9,10 @@ export default function About() {
         <Helmet>
           <title>About | VocabVault</title>
         </Helmet>
-        <section aria-labelledby="about" className={[styles.section, "section"].join(" ")}>
+        <section
+          aria-labelledby="about"
+          className={[styles.section, "section"].join(" ")}
+        >
           <div className={[styles.abouth2Wrapper, "h2Wrapper"].join(" ")}>
             <h2 id="about">About</h2>
           </div>
@@ -17,7 +20,7 @@ export default function About() {
           <div className="setPaddingInline">
             <div className={styles.paraAndImgWrapper}>
               <div className={styles.aboutImgWrapper}></div>
-              <div>
+              <div className={styles.aboutTextWrapper}>
                 <p className={styles.aboutText}>
                   Welcome to VocabVault, your ultimate companion for expanding
                   your vocabulary and mastering the art of words. Our mission is
@@ -31,7 +34,10 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className={styles.h3Wrapper} data-content="platform database">
+            <div
+              className={styles.h3ParaWrapper}
+              data-content="platform database"
+            >
               <h3 className={styles.secondaryHeadings}>Platform Database</h3>
               <p>
                 Our platform currently has access to over 250,000 words through
@@ -39,7 +45,7 @@ export default function About() {
               </p>
             </div>
             <hr className={styles.horizontalLine} />
-            <div className={styles.h3Wrapper} data-content="user searches">
+            <div className={styles.h3ParaWrapper} data-content="user searches">
               <h3 className={styles.secondaryHeadings}>User Searches</h3>
               <p>
                 Collectively, users have searched for over 12,500 words since

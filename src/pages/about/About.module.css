@@ -1,68 +1,57 @@
-section.section {
+.section {
     padding-bottom: 15em;
 }
 
-div.abouth2Wrapper {
+.abouth2Wrapper {
     margin-bottom: 6rem;
 }
 
-div.paraAndImageWrapper {
+.paraAndImgWrapper {
     display: flex;
-    justify-content: space-between;
-}
-
-div.paraAndImgWrapper {
-    display: flex;
-    justify-content: space-around;
     margin-bottom: 15rem;
 }
 
-div.aboutImgWrapper {
+.aboutImgWrapper {
     background-image: url("../../assets/words_about.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 35%;
     height: 25em;
-    box-shadow: 1px 1px 5px var(--black);
+    box-shadow: 6px 6px 20px var(--black);
 }
 
-div.paraAndImgWrapper > div:last-child {
-    width: 50%;
-}
-
-p.aboutText {
+.aboutText {
     font-size: 1.2rem;
+
+    &::first-letter {
+        font-size: 180%;
+        font-weight: 600;
+    }
 }
 
-p.aboutText::first-letter {
-    font-size: 180%;
-    font-weight: 600;
-}
-
-div.h3Wrapper {
+.h3ParaWrapper {
     text-align: center;
     padding: 8em 0;
 }
 
-h3.secondaryHeadings {
-    font-size: 3.2rem;
-}
-
-h3.secondaryHeadings + p {
-    font-size: 1.1rem;
-}
-
-div.h3Wrapper[data-content="platform database"] {
+.h3ParaWrapper[data-content="platform database"] {
     margin-bottom: 12rem;
 }
 
-hr.horizontalLine {
+.secondaryHeadings {
+    font-size: 3.2rem;
+
+    & + p {
+        font-size: 1.1rem;
+    }
+}
+
+.horizontalLine {
     width: 50%;
 }
 
-/* Wrap in media query to make sure that it only applies when the user preference allows motion */
+/* Wrap in media query to make sure that it only applies when the user hasn't any preference */
 @media (prefers-reduced-motion: no-preference) {
-    div.h3Wrapper {
+    .h3ParaWrapper {
         opacity: 0;
         scale: 0.9;
         animation: fade-in linear forwards;
@@ -78,5 +67,26 @@ hr.horizontalLine {
             opacity: 1;
             scale: 1;
         }
+    }
+}
+
+@media (width >= 280px) {
+    .paraAndImgWrapper {
+        flex-direction: column;
+    }
+}
+
+@media (width >= 992px) {
+    .paraAndImgWrapper {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .aboutTextWrapper {
+        width: 50%;
+    }
+
+    .aboutImgWrapper {
+        width: 35%;
     }
 }
