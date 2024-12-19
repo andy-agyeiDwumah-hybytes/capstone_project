@@ -1,24 +1,25 @@
-form.form {
-    text-align: center;
-    padding: 2em 0;
-    margin-bottom: 5rem;
-}
-
-section.section {
+.section {
     /* Important: allows section to take up full height of its parent container */
     /* Without this it will only expand to fit their content */
     flex-grow: 1;
 }
 
-input.searchInput {
+.search {
+    margin-bottom: 5rem;
+}
+
+.form {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.searchInput {
     padding: 1em 1.5em;
     border-radius: 10px;
 }
 
-div.resultsContainer {
+.resultsContainer {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    gap: 2em;
     padding-bottom: 10em;
 
     & > div {
@@ -29,19 +30,20 @@ div.resultsContainer {
     }
 }
 
-div.errorLoadingContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.errorLoadingContainer {
+    display: grid;
+    min-height: 12vh;
+    place-items: start center;
 }
 
-p.loadingErrorText {
+.loadingErrorText {
     font-size: 1.8rem;
     font-weight: 600;
+    text-wrap: balance;
+    text-align: center;
 }
 
-h3.heading {
+.heading {
     font-size: 2rem;
 }
 
@@ -49,10 +51,24 @@ h3.heading {
     text-transform: capitalize;
 }
 
-p.searchWord {
+.searchWord {
     font-size: 2rem;
 }
 
 .list > li {
     margin-bottom: 0.8em;
+}
+
+@media (width >= 280px) {
+    .resultsContainer {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        row-gap: 2.5em;
+    }
+}
+
+@media (width >= 992px) {
+    .resultsContainer {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 2em;
+    }
 }

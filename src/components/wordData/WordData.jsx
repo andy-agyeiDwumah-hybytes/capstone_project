@@ -4,7 +4,6 @@ export default function WordData({ word, styles, results, generateKey }) {
       <div>
         <p className={[styles.capitaliseText, styles.searchWord].join(" ")}>
           {word}
-          &nbsp;
         </p>
       </div>
       <div>
