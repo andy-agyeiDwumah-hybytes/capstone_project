@@ -1,75 +1,112 @@
-div.textFormWrapper {
+.textFormWrapper {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
     margin: 5rem 0;
     box-shadow: 1px 1px 5px var(--black);
+    background-color: #ffe5e5;
 }
 
-div.textWrapper {
-    padding: 0.5em 2em;
+.textWrapper {
     text-align: center;
     background: #ffe5e5;
 }
 
-div.textWrapper > h3 {
+.getInTouchHeading {
     font-size: 2.8rem;
 }
 
-div.textWrapper > p {
+.getInTouchText {
     font-size: 1.1rem;
 }
 
-div.formWrapper {
+.formWrapper {
     padding: 0.5em 0;
     margin: 0;
+    background-color: var(--white);
 }
 
-form.form {
-    width: 70%;
+.form {
     margin: 0 auto;
 }
 
-label.label {
+.label {
     display: block;
     margin-bottom: 0.5em;
 }
 
-input.input, .textarea {
+.input, .textarea {
     padding: 0.5em;
+    filter: brightness(90%);
+    width: 100%;
 }
 
-input.input {
+.input {
     margin-bottom: 1.5em;
 }
 
-label.label,
-input.input,
+.label,
+.input,
 .textarea {
     font-size: 1.5rem;
-}
-
-.formField {
-    filter: brightness(90%);
-    width: 100%;
 }
 
 .textarea {
     resize: vertical;
 }
 
-span.required {
+.required {
     color: var(--red);
 }
 
-div.btnContainer {
+.btnContainer {
     margin: 2em 0;
 }
 
-button.submitBtn {
+.submitBtn {
     padding: 0.5em 1em;
     font-size: 1.1rem;
     background: linear-gradient(to right, var(--red), var(--white));
     box-shadow: 2px 2px var(--black);
     width: 100%;
     border-radius: 0;
+}
+
+@media (width >= 280px) {
+    .textFormWrapper {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+    
+    .form {
+        width: 90%;
+    }
+    
+    .formWrapper {
+        border-start-start-radius: 5%;
+        border-start-end-radius: 5%;
+    }
+    
+    .textWrapper {
+        padding-inline: 0.5em;
+        margin-bottom: 2em;
+    }
+}
+
+@media (width >= 992px) {
+    .textFormWrapper {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+    
+    .form {
+        width: 70%;
+    }
+
+    .formWrapper {
+        border-radius: 0;
+        border-start-start-radius: 10%;
+        border-end-start-radius: 10%;
+    }
+
+    .textWrapper {
+        padding: 0.5em 2em;
+        margin-bottom: 0;
+    }
 }

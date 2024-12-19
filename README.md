@@ -7,8 +7,6 @@ VocabVault is a React-based web application designed to help users expand their 
 - **User Authentication**: Sign up, log in, and log out functionality with persistent sessions.
 - **Search Words**: Search for specific words and retrieve detailed information.
 
-- **Currently working on making the website responsive and adding improved form validation for user authentication.**
-
 ## The User Interface 🔍
 
 ### Home page:
