@@ -1,5 +1,5 @@
 // React
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Helmet } from "react-helmet-async"
 // Styles
 import styles from "./Contact.module.css"
@@ -11,8 +11,21 @@ export default function Contact() {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
+  const formRef = useRef()
+
   const handleSubmit = e => {
     e.preventDefault()
+    const form = new FormData(formRef.current)
+    const userName = form.get("user_name")
+    const userEmail = form.get("user_email")
+    const userMessage = form.get("user_message")
+
+    console.log(`Name: ${userName}\nEmail: ${userEmail}\nMessage: ${userMessage}`)
+    alert("Message was sent successfully! View console for receipt")
+
+    setName("")
+    setEmail("")
+    setMessage("")
     return
   }
 
@@ -45,6 +58,7 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 className={styles.form}
                 aria-labelledby="get-in-touch-heading"
+                ref={formRef}
               >
                 <p>
                   Required fields are followed by&nbsp;
