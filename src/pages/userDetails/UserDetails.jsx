@@ -38,16 +38,25 @@ export default function UserDetails() {
           <h2 id="my-details">My Details</h2>
         </div>
         <div className="setPaddingInline">
-          <div className={styles.flexWrapper}>
-            <div className={styles.logOutWrapper}>
-              <button onClick={handleClick}>Log out</button>
-            </div>
-            <div className={styles.mainContentWrapper}>
-              <div className={styles.addImageWrapper}>
-                <button type="button">Add image</button>
-              </div>
-              <div className={styles.editProfileWrapper}>
-                <button type="button">Edit profile</button>
+          <div className={styles.logOutWrapper}>
+            <button onClick={handleClick} className={styles.logoutBtn}>
+              Log out
+            </button>
+          </div>
+          <hr className={styles.horizontalLine} />
+          <div className={styles.mainContentWrapper}>
+            <div className={styles.overlay}>
+              <div className={styles.imageEditProfileWrapper}>
+                <div className={styles.addImageWrapper}>
+                  <button type="button" className={styles.addImageBtn}>
+                    Add image
+                  </button>
+                </div>
+                <div className={styles.editProfileWrapper}>
+                  <button type="button" className={styles.editBtn}>
+                    Edit profile
+                  </button>
+                </div>
               </div>
               <div className={styles.userDataWrapper}>
                 <UserPreferences
@@ -71,9 +80,11 @@ export default function UserDetails() {
                 >
                   Privacy Settings
                 </UserPreferences>
-              </div>
-              <div className={styles.deleteAccountWrapper}>
-                <button type="button">Delete account</button>
+                <div className={styles.deleteAccountWrapper}>
+                  <button type="button" className={styles.deleteBtn}>
+                    Delete account
+                  </button>
+                </div>
               </div>
             </div>
           </div>

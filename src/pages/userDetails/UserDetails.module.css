@@ -1,103 +1,136 @@
-section.section {
+.section {
     padding-bottom: 5em;
 }
 
-div.headingWrapper {
+.headingWrapper {
     margin-bottom: 3rem;
 }
 
-div.flexWrapper {
-    display: flex;
-    justify-content: space-around;
-}
-
-div.logOutWrapper {
+.logOutWrapper {
     text-align: center;
     padding: 3em 0;
-    height: 10em;
-    border-radius: 10%;
-    width: 30%;
+}
+
+.logoutBtn {
+    font-size: 1.2rem;
+    padding: 0.5em 1.5em;
+    background-color: #E0E0E0;
+    font-weight: 600;
+    box-shadow: 1px 1px 2px var(--black);
+}
+
+.horizontalLine {
+    width: 50%;
+}
+
+.mainContentWrapper {
+    overflow: hidden;
+    margin: 5rem auto 0;
+    box-shadow: 8px 8px 20px rgba(0 0 0 / 1);
+}
+
+.overlay {
+    --opacity: 0.9;
+    display: flex;
     background-image: url("../../assets/words_contact.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    &>button {
-        font-size: 1.2rem;
-        padding: 0.5em 1.5em;
-        background-color: #E0E0E0;
-        font-weight: 600;
-        box-shadow: 1px 1px 2px var(--black);
-    }
+    border-image: fill 1 linear-gradient(
+        rgba(255 255 240 / var(--opacity)) 5%,
+        rgba(0 0 0 / var(--opacity)));
+
+        & > div {
+            flex-grow: 1;
+        }
 }
 
-div.mainContentWrapper {
-    border-radius: 20%;
-    padding: 2.5em 0;
-    background: linear-gradient(to bottom right, #FCFCFC 90%, #363537);
-    width: 40%;
-}
-
-div.addImageWrapper {
-    border: 1px solid var(--black);
+.addImageWrapper {
     text-align: center;
     border-radius: 50%;
     margin: 0 auto;
     width: 18em;
     padding: 6em;
-    background-color: rgba(163 162 162 / 1);
+    background-color: rgb(209, 209, 209);
     box-shadow: 1px 1px 5px var(--black);
     margin-bottom: 1.8em;
-
-    &>button {
-        font-size: 1rem;
-    }
 }
 
-div.editProfileWrapper {
+.addImageBtn {
+    font-size: 1rem;
+}
+
+.editProfileWrapper {
     text-align: center;
-    margin-bottom: 8rem;
-
-    &>button {
-        background-color: rgba(101 101 210 / 1);
-        font-size: 1.1rem;
-        padding: 0 1.2em;
-        box-shadow: 1px 1px 2px var(--black);
-    }
 }
 
-div.userDataWrapper {
-    margin-bottom: 10em;
+.editBtn {
+    background-color: rgba(101 101 210 / 1);
+    font-size: 1.1rem;
+    padding: 0 1.2em;
+    box-shadow: 1px 1px 2px var(--black);
+    border-radius: 0;
 }
 
-div.userDataWrapper > div {
+.userDataWrapper > div:not(.deleteAccountWrapper) {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
     padding: 2em 1em;
     transition: background-color 600ms ease-in;
     border-radius: 5px;
+    margin-bottom: 2em;
+    background-color: rgba(255 255 255 / 0.1);
+
+    &:hover {
+        background-color: rgba(223 223 239 / 1);
+        cursor: pointer;
+    }
 }
 
-div.userDataWrapper>div:hover {
-    background-color: rgba(223 223 239 / 1);
-    cursor: pointer;
-}
-
-div.userDataText {
+.userDataText {
     font-size: 1.6rem;
 }
 
-div.deleteAccountWrapper {
+.deleteAccountWrapper {
     text-align: center;
+    padding: 5em 0 0;
 }
 
-div.deleteAccountWrapper > button {
+.deleteBtn {
     background-color: var(--red);
     font-size: 1.2rem;
-    padding: 0 1.5em;
+    padding: 0.5em 1.5em;
     font-weight: 600;
+    transition: background-color 1s ease-in;
+
+    &:hover {
+        background-color: rgba(255 0 0 / 1);
+    }
 }
 
 .icon {
     font-size: 2.5rem;
+}
+
+@media (width >= 280px) {
+    .overlay {
+        flex-direction: column;
+        padding: 5em 0.5em;
+    }
+
+    .editProfileWrapper {
+        margin: 5em 0 5em;
+    }
+}
+
+@media (width >= 992px) {
+    .overlay {
+        justify-content: space-around;
+        padding: 5em 1.5em;
+        flex-direction: row;
+    }
+
+    .editProfileWrapper {
+        margin-bottom: 0;
+    }
+
 }
