@@ -20,7 +20,7 @@ export default function Header() {
           className={styles.headerLogo}
         />
       </Link>
-      <nav>
+      <nav aria-label="Primary">
         <menu className={styles.headerMenu}>
           <li>
             <NavLink to="/" className={styles.headerLinks}>

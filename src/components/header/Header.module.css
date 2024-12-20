@@ -1,4 +1,4 @@
-header.headerWrapper {
+.headerWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,19 +8,19 @@ header.headerWrapper {
     background-color: var(--headerFooterColour);
 }
 
-img.headerLogo {
+.headerLogo {
     width: 210px;
 }
 
-menu.headerMenu > li {
+.headerMenu > li {
     display: inline-block;
 }
 
-menu.headerMenu > li:not(:last-child) {
+.headerMenu > li:not(:last-child) {
     margin-right: 2.8em;
 }
 
-a.headerLinks {
+.headerLinks {
     font-size: 1.2rem;
     color: var(--white);
 
