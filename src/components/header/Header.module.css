@@ -127,7 +127,9 @@
         /* Restore initial order */
         order: 1;
         width: auto;
-        height: auto;
+        /* Very Important: This prevents awkward transitions  */
+        height: 0;
+        padding-bottom: 2.5em;
     }
 
     /* .nav .hamburger > .bar:first-child {
