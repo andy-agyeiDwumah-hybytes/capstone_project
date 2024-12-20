@@ -22,8 +22,8 @@ export default function Home() {
         className={[styles.hero, styles.overlay].join(" ")}
       >
         <div className={styles.textContentWrapper}>
-          <h1 id="home">VocabVault</h1>
-          <p>Join 1,200+ users improving their vocabulary today!</p>
+          <h1 id="home" className={styles.heading}>VocabVault</h1>
+          <p className={styles.para}>Join 1,200+ users improving their vocabulary today!</p>
           <div>
             <button
               type="button"

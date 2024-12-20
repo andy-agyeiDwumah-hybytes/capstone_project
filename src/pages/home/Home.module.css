@@ -1,4 +1,4 @@
-section.hero {
+.hero {
     background-image: url("../../assets/hero-img.webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,24 +7,24 @@ section.hero {
     text-align: center;
 }
 
-section.overlay {
+.overlay {
     border-image: fill 1 linear-gradient(rgba(255 255 255 / 0.6), rgba(0 0 0 / 0.7));
 }
 
-div.textContentWrapper > h1 {
-    font-size: 5.5rem;
+.heading {
+    font-size: clamp(2.8rem, 10vw, 5.5rem);
     letter-spacing: 5px;
     text-shadow: 1px 1px var(--black);
     margin-bottom: 0.2em;
 }
 
-div.textContentWrapper > p {
+.para {
     font-weight: 800;
     font-size: 1.4rem;
     margin-bottom: 2.5rem;
 }
 
-button.heroBtn {
+.heroBtn {
     font-size: 1.2rem;
     background: conic-gradient(var(--red), var(--black) 180deg);
     color: var(--white);
