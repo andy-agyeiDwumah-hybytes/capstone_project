@@ -17,7 +17,7 @@ export default function AuthForm() {
   const { handleLogin, handleSignUp } = useContext(UserContext)
   const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     // Represents the default action of a user logging in or signing up
     // Method returns 'true' if action was successful
@@ -33,7 +33,6 @@ export default function AuthForm() {
     } else {
       return
     }
-
   };
 
   const handleClick = () => {
@@ -48,14 +47,28 @@ export default function AuthForm() {
   return (
     <>
       <Helmet>
-        <title>{ logIn ? "Log in" : "Sign up" } | VocabVault</title>
+        <title>{logIn ? "Log in" : "Sign up"} | VocabVault</title>
       </Helmet>
-      <section className={["section", styles.section].join(" ")}>
-        <form onSubmit={handleSubmit} className={styles.authForm}>
-          <h1 className={styles.formHeading}>{logIn ? "Log in" : "Sign up"}</h1>
-          <div>
+      <section
+        className={["section", styles.section].join(" ")}
+        aria-labelledby="auth-form-heading"
+      >
+        <form
+          onSubmit={handleSubmit}
+          className={styles.authForm}
+          aria-label="Authentication"
+        >
+          <h1 className={styles.formHeading} id="auth-form-heading">
+            {logIn ? "Log in" : "Sign up"}
+          </h1>
+          <p>
+            Required fields are followed by <span aria-label="required">*</span>
+            .
+          </p>
+
+          <div className={styles.labelInputWrapper}>
             <label htmlFor="username" className={styles.authFormLabel}>
-              Name:
+              Name: <span aria-label="required">*</span>
             </label>
             <input
               type="text"
@@ -63,43 +76,43 @@ export default function AuthForm() {
               name="username"
               value={name}
               maxLength={5}
-              onChange={(e) => setName(e.target.value)}
+              onChange={e => setName(e.target.value)}
               className={styles.inputField}
               required
             />
           </div>
           {!logIn && (
-            <div>
+            <div className={styles.labelInputWrapper}>
               <label htmlFor="email" className={styles.authFormLabel}>
-                Email:
+                Email: <span aria-label="required">*</span>
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={e => setEmail(e.target.value)}
                 className={styles.inputField}
                 required
               />
             </div>
           )}
-          <div>
+          <div className={styles.labelInputWrapper}>
             <label htmlFor="password" className={styles.authFormLabel}>
-              Password:
+              Password: <span aria-label="required">*</span>
             </label>
             <input
               type="password"
               id="password"
               name="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={e => setPassword(e.target.value)}
               className={styles.inputField}
               required
             />
           </div>
           <div className={styles.btnContainer}>
-            <button type="submit">{logIn ? "Log in" : "Sign up"}</button>
+            <button type="submit" className={styles.submitBtn}>{logIn ? "Log in" : "Sign up"}</button>
             <button type="button" onClick={handleClick}>
               Switch to {logIn ? "Sign up" : "Log in"}?
             </button>

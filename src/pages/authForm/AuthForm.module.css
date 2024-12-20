@@ -1,56 +1,76 @@
-section.section {
+.section {
     flex-grow: 1;
 }
 
-form.authForm {
+span[aria-label="required"] {
+    color: var(--red);
+}
+
+.authForm {
     border-radius: 10px;
     border: 1px solid var(--black);
     padding: 2.5em 1.5em;
-    width: 30%;
     margin: 4em auto;
     box-shadow: 1px 1px 5px var(--black);
     background-color: var(--white);
 }
 
-h1.formHeading {
+.formHeading {
     text-align: center;
     font-size: 3.5rem;
 }
 
-label.authFormLabel {
+.authFormLabel {
     display: block;
     margin-bottom: 1em;
 }
 
-label.authFormLabel,
-input.inputField {
+.authFormLabel,
+.inputField {
     font-size: 1.4rem;
     filter: brightness(90%);
 }
 
-input.inputField {
+.inputField {
     padding: 0.5em;
     border-radius: 10px;
     width: 100%;
 }
 
-div:has(label.authFormLabel) {
+.labelInputWrapper {
     margin-bottom: 1.2em;
-}
-
-div.btnContainer > button {
-    display: block;
-    font-size: 1.2rem;
-    padding: 0.2em 1em;
-    box-shadow: 2px 2px var(--black);
-}
-
-div.btnContainer > button[type="submit"] {
-    background: linear-gradient(to right, var(--red), var(--white));
 }
 
 div.btnContainer {
     display: flex;
     justify-content: space-around;
     padding: 2em 0;
+}
+
+div.btnContainer > button {
+    font-size: 1.2rem;
+    padding: 0.2em 1em;
+    box-shadow: 2px 2px var(--black);
+}
+
+.submitBtn {
+    background: linear-gradient(to right, var(--red), var(--white));
+}
+
+@media (width >= 576px) {
+    .authForm {
+        width: 80%;
+    }
+}
+
+@media (width >= 1200px) {
+    .authForm {
+        width: 50%;
+    }
+}
+
+@media (width >= 1500px) {
+    .authForm {
+        width: 35%;
+    }
 }
