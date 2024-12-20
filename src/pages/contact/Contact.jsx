@@ -3,6 +3,8 @@ import { useState } from "react"
 import { Helmet } from "react-helmet-async"
 // Styles
 import styles from "./Contact.module.css"
+// Constants
+import { MAXLENGTHFORUSERNAME } from "../../constants/Constants"
 
 export default function Contact() {
   const [name, setName] = useState("")
@@ -63,6 +65,7 @@ export default function Contact() {
                     id="name"
                     name="user_name"
                     value={name}
+                    maxLength={MAXLENGTHFORUSERNAME}
                     onChange={e => setName(e.target.value)}
                     className={styles.input}
                     required

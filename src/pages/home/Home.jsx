@@ -19,7 +19,7 @@ export default function Home() {
       </Helmet>
       <section
         aria-labelledby="home"
-        className={[styles.hero, styles.overlay].join(" ")}
+        className={styles.hero}
       >
         <div className={styles.textContentWrapper}>
           <h1 id="home" className={styles.heading}>VocabVault</h1>

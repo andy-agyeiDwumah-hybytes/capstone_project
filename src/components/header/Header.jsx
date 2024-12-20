@@ -1,19 +1,19 @@
 // React
 import { Link, NavLink } from "react-router"
-import { useContext } from "react";
+import { useContext } from "react"
 // Logo
 import VocabVaultLogo from "../../assets/vocabvault_logo.png"
 // Styles
 import styles from "./Header.module.css"
 // Context
-import { UserContext } from "../../context/UserContext";
-import { MenuContext } from "../../context/MenuContext";
+import { UserContext } from "../../context/UserContext"
+import { MenuContext } from "../../context/MenuContext"
 
 export default function Header({ onHandleClick }) {
   // Represents the current user
-  const { user } = useContext(UserContext);
+  const { user } = useContext(UserContext)
   // Represents the menu state (if open or closed)
-  const menuIsExpanded = useContext(MenuContext);
+  const menuIsExpanded = useContext(MenuContext)
 
   return (
     <header className={[styles.headerWrapper, "setPaddingInline"].join(" ")}>

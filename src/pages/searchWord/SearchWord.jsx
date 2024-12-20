@@ -1,30 +1,30 @@
 // React
-import { Helmet } from "react-helmet-async";
-import { useId, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { Helmet } from "react-helmet-async"
+import { useId, useState } from "react"
+import { v4 as uuidv4 } from "uuid"
 // Styles
-import styles from "./SearchWord.module.css";
+import styles from "./SearchWord.module.css"
 // Custom hook
 import {useFetchWord } from "../../hooks/UseFetchWord"
 // Components
-import WordData from "../../components/wordData/WordData";
+import WordData from "../../components/wordData/WordData"
 
 export default function SearchWord() {
-  const [searchWord, setSearchWord] = useState("");
-  const wordDataId = useId();
+  const [searchWord, setSearchWord] = useState("")
+  const wordDataId = useId()
 
   // Custom hook - see hooks directory
   const { wordData, error, fetchWord, loading } = useFetchWord()
 
   const handleSubmit = async e => {
-    e.preventDefault();
+    e.preventDefault()
     fetchWord(searchWord)
     // Clear input
     setSearchWord("")
-  };
+  }
 
   const generateKey = () => {
-    return uuidv4();
+    return uuidv4()
   }
 
   return (
@@ -54,7 +54,7 @@ export default function SearchWord() {
                 placeholder="Search a word..."
                 aria-label="Search a word"
                 value={searchWord}
-                onChange={(e) => setSearchWord(e.target.value)}
+                onChange={e => setSearchWord(e.target.value)}
               />
               {/* Note: Add search icon */}
             </form>

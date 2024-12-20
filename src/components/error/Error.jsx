@@ -1,5 +1,5 @@
 // React
-import { Link } from "react-router";
+import { Link } from "react-router"
 // Styles
 import styles from "./Error.module.css"
 

@@ -1,29 +1,29 @@
 // Styles
-import styles from "./UserDetails.module.css";
+import styles from "./UserDetails.module.css"
 // Fontawesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faBookOpenReader,
   faHeart,
   faShieldHalved,
-} from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
 // React
-import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router";
-import { useContext } from "react";
+import { Helmet } from "react-helmet-async"
+import { useNavigate } from "react-router"
+import { useContext } from "react"
 // Components
-import UserPreferences from "../../components/userPreferences/UserPreferences";
+import UserPreferences from "../../components/userPreferences/UserPreferences"
 // Context
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context/UserContext"
 
 export default function UserDetails() {
-  const { handleLogOut } = useContext(UserContext);
-  const navigate = useNavigate();
+  const { handleLogOut } = useContext(UserContext)
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    handleLogOut();
-    navigate("/");
-  };
+    handleLogOut()
+    navigate("/")
+  }
 
   return (
     <>

@@ -1,39 +1,42 @@
 // React
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router";
-import { Helmet } from "react-helmet-async";
+import { useContext, useState } from "react"
+import { useNavigate } from "react-router"
+import { Helmet } from "react-helmet-async"
 // Context
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context/UserContext"
 // Styles
-import styles from "./AuthForm.module.css";
+import styles from "./AuthForm.module.css"
+// Constants
+import { MAXLENGTHFORUSERNAME } from "../../constants/Constants";
 
 export default function AuthForm() {
   // Set default form to 'log in' form
-  const [logIn, setLogIn] = useState(true);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [logIn, setLogIn] = useState(true)
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   const { handleLogin, handleSignUp } = useContext(UserContext)
   const navigate = useNavigate()
 
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
     // Represents the default action of a user logging in or signing up
     // Method returns 'true' if action was successful
-    let success = false;
+    let success = false
     if (logIn) {
-      success = handleLogin(name, password);
+      success = handleLogin(name, password)
     } else {
-      success = handleSignUp(name, email, password);
+      success = handleSignUp(name, email, password)
     }
   
     if (success) {
       navigate("/")
+      alert("Logged in succesfully!")
     } else {
       return
     }
-  };
+  }
 
   const handleClick = () => {
     // Change to sign up form vice versa
@@ -75,12 +78,13 @@ export default function AuthForm() {
               id="username"
               name="username"
               value={name}
-              maxLength={5}
+              maxLength={MAXLENGTHFORUSERNAME}
               onChange={e => setName(e.target.value)}
               className={styles.inputField}
               required
             />
           </div>
+          {/* Show email section for users who want to sign in only */}
           {!logIn && (
             <div className={styles.labelInputWrapper}>
               <label htmlFor="email" className={styles.authFormLabel}>
