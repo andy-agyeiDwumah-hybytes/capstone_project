@@ -9,12 +9,14 @@
 }
 
 .nav {
-    transition: height var(--transition-duration) ease-in;
+    transition: height 200ms ease-in;
 }
 
 .headerMenu > li {
     /* Important: this will allow links to remain visible until menu is closed */
-    transition: visibility var(--transition-duration) ease-in;
+    transition-property: opacity visibility;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in;
 }
 
 .logoLink {
@@ -91,10 +93,12 @@
         display: block;
         /* Prevent users from toggling through links if hamburger menu isn't active */
         visibility: hidden;
+        opacity: 0;
     }
 
     .nav.expanded .headerMenu > li {
         visibility: visible;
+        opacity: 1;
     }
 
     .headerMenu > li:not(:last-child) {
@@ -110,7 +114,7 @@
     }
 }
 
-@media (width >= 768px) {
+@media (width >= 992px) {
     .headerWrapper {
         flex-wrap: nowrap;
     }
@@ -143,6 +147,7 @@
     .headerMenu > li {
         display: inline-block;
         visibility: visible;
+        opacity: 1;
     }
     
     .headerMenu > li:not(:last-child) {

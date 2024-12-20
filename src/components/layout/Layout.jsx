@@ -22,7 +22,8 @@ export default function Layout() {
 
   useEffect(() => {
     // Reset menu state to closed if previously it was open
-    if (windowWidth >= 768 && menuIsExpanded) {
+    // Important: Breakpoint must match breakpoint specified in Header.module.css
+    if (windowWidth >= 992 && menuIsExpanded) {
       setMenuIsExpanded(false)
     }
   }, [windowWidth, menuIsExpanded])

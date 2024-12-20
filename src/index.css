@@ -6,7 +6,6 @@
   --red: #FF1B1C;
   --backgroundWhite: #F4F3EE;
   interpolate-size: allow-keywords;
-  --transition-duration: 1s;
 }
 
 html {
