@@ -17,12 +17,22 @@ import UserPreferences from "../../components/userPreferences/UserPreferences"
 import { UserContext } from "../../context/UserContext"
 
 export default function UserDetails() {
-  const { handleLogOut } = useContext(UserContext)
+  const { user, handleLogOut, handleRemoveUserFromLocalStorage } = useContext(UserContext)
   const navigate = useNavigate()
 
-  const handleClick = () => {
-    handleLogOut()
+  const handleLogOutUser = (userWantsToDeleteAccount=false) => {
+    handleLogOut(userWantsToDeleteAccount);
     navigate("/")
+  }
+
+  const handleDeleteAccount = userName => {
+    let deleteAccount = window.confirm(
+      `Are you sure you want to delete your account?` +
+      `\nThis action cannot be undone.`
+    )
+    if (!deleteAccount) return
+      handleRemoveUserFromLocalStorage(userName);
+      handleLogOutUser(true)
   }
 
   return (
@@ -39,7 +49,7 @@ export default function UserDetails() {
         </div>
         <div className="setPaddingInline">
           <div className={styles.logOutWrapper}>
-            <button onClick={handleClick} className={styles.logoutBtn}>
+            <button onClick={() => handleLogOutUser()} className={styles.logoutBtn}>
               Log out
             </button>
           </div>
@@ -84,7 +94,10 @@ export default function UserDetails() {
                   Privacy Settings
                 </UserPreferences>
                 <div className={styles.deleteAccountWrapper}>
-                  <button type="button" className={styles.deleteBtn}>
+                  <button
+                    type="button"
+                    className={styles.deleteBtn}
+                    onClick={() => handleDeleteAccount(user.name)}>
                     Delete account
                   </button>
                 </div>

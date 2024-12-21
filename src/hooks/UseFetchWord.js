@@ -23,7 +23,7 @@ export function useFetchWord() {
     try {
       const fetchPromise = fetch(URL, API_OPTIONS).then((response) => {
         if (!response.ok) {
-          throw new Error("Failed to fetch data")
+          throw new Error("Failed to fetch data or word does not exist")
         }
         return response.json()
       })

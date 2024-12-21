@@ -77,7 +77,7 @@ export default function SearchWord() {
             error ? (
               <div>
                 <p className={styles.loadingErrorText}>
-                  {error.message}. Please try again
+                  {error.message}. Please try again.
                 </p>
               </div>
             ) : (
