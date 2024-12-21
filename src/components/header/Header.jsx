@@ -1,6 +1,6 @@
 // React
 import { Link, NavLink } from "react-router"
-import { useContext } from "react"
+import { useContext, useRef } from "react"
 // Logo
 import VocabVaultLogo from "../../assets/vocabvault_logo.png"
 // Styles
@@ -14,6 +14,13 @@ export default function Header({ onHandleClick }) {
   const { user } = useContext(UserContext)
   // Represents the menu state (if open or closed)
   const menuIsExpanded = useContext(MenuContext)
+  const hamburgerRef = useRef()
+
+  const handleKeyDown = e => {
+    // Allow for users to toggle hamburger with keyboard
+    if (e.code !== "Enter") return
+      onHandleClick()
+  }
 
   return (
     <header className={[styles.headerWrapper, "setPaddingInline"].join(" ")}>
@@ -79,6 +86,7 @@ export default function Header({ onHandleClick }) {
         role="button"
         tabIndex="0"
         onClick={onHandleClick}
+        onKeyDown={e => handleKeyDown(e)}
       >
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>

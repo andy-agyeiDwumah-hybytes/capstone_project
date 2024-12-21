@@ -38,12 +38,15 @@
 
 .hamburger {
     cursor: pointer;
+    /* animation-name: restoreHamburger;
+    animation-duration: 2s;
+    animation-fill-mode: both; */
 }
 
 /* .hamburger.active {
     animation-name: animateHamburger;
     animation-duration: 2s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
 } */
 
 .bar {
@@ -168,5 +171,11 @@
 /* @keyframes animateHamburger {
     to {
         transform: rotate(30deg);
+    }
+} */
+
+/* @keyframes restoreHamburger {
+    to {
+        transform: rotate(60deg);
     }
 } */
