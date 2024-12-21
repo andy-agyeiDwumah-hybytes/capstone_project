@@ -38,16 +38,16 @@
 
 .hamburger {
     cursor: pointer;
-    /* animation-name: restoreHamburger;
-    animation-duration: 2s;
-    animation-fill-mode: both; */
+    transition: transform 1s ease;
 }
 
-/* .hamburger.active {
-    animation-name: animateHamburger;
-    animation-duration: 2s;
-    animation-fill-mode: both;
-} */
+.hamburger.rotate {
+    transform: rotate(30deg);
+}
+
+.hamburger.restoreRotation {
+    transform: rotate(0deg);
+}
 
 .bar {
     display: block;
@@ -76,16 +76,6 @@
     .nav.expanded {
         height: auto;
     }
-
-    /* .nav.nav.expanded .hamburger > .bar:first-child {
-        transform: rotate(30deg);
-    }
-    .nav.nav.expanded .hamburger > .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .nav.nav.expanded .hamburger > .bar:last-child {
-        transform: rotate(30deg);
-    } */
 
     .headerMenu {
         padding: 1em 0;
@@ -135,16 +125,6 @@
         padding-bottom: 2.5em;
     }
 
-    /* .nav .hamburger > .bar:first-child {
-        transform: rotate(0);
-    }
-    .nav .hamburger > .bar:nth-child(2) {
-        opacity: 1;
-    }
-    .nav .hamburger > .bar:last-child {
-        transform: rotate(0);
-    } */
-
     .headerMenu {
         padding: 0;
     }
@@ -168,14 +148,18 @@
     }
 }
 
-/* @keyframes animateHamburger {
+/* Allow animation to be accessible globally and not just scoped in this module */
+/* @keyframes :global(animateHamburger) {
     to {
         transform: rotate(30deg);
     }
-} */
+}
 
-/* @keyframes restoreHamburger {
+@keyframes :global(restoreHamburger) {
+    from {
+        transform: rotate(45deg);
+    }
     to {
-        transform: rotate(60deg);
+        transform: rotate(0deg);
     }
 } */

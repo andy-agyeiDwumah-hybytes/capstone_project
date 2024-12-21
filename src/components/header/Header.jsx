@@ -1,6 +1,6 @@
 // React
 import { Link, NavLink } from "react-router"
-import { useContext, useRef } from "react"
+import { useContext } from "react"
 // Logo
 import VocabVaultLogo from "../../assets/vocabvault_logo.png"
 // Styles
@@ -9,17 +9,16 @@ import styles from "./Header.module.css"
 import { UserContext } from "../../context/UserContext"
 import { MenuContext } from "../../context/MenuContext"
 
-export default function Header({ onHandleClick }) {
+export default function Header({ onHandleClick, isRotated }) {
   // Represents the current user
   const { user } = useContext(UserContext)
   // Represents the menu state (if open or closed)
   const menuIsExpanded = useContext(MenuContext)
-  const hamburgerRef = useRef()
 
   const handleKeyDown = e => {
     // Allow for users to toggle hamburger with keyboard
     if (e.code !== "Enter") return
-      onHandleClick()
+    onHandleClick()
   }
 
   return (
@@ -78,11 +77,7 @@ export default function Header({ onHandleClick }) {
         </menu>
       </nav>
       <div
-        className={
-          menuIsExpanded
-            ? [styles.hamburger, styles.active].join(" ")
-            : styles.hamburger
-        }
+        className={[styles.hamburger, isRotated ? styles.rotate : styles.restoreRotation].join(" ")}
         role="button"
         tabIndex="0"
         onClick={onHandleClick}
