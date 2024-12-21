@@ -63,6 +63,7 @@ export default function UserDetails() {
                   icon={faBookOpenReader}
                   styles={styles}
                   FontAwesomeIcon={FontAwesomeIcon}
+                  dataContent="my-learning"
                 >
                   My learning
                 </UserPreferences>
@@ -70,6 +71,7 @@ export default function UserDetails() {
                   icon={faHeart}
                   styles={styles}
                   FontAwesomeIcon={FontAwesomeIcon}
+                  dataContent="saved-words"
                 >
                   Saved Words
                 </UserPreferences>
@@ -77,6 +79,7 @@ export default function UserDetails() {
                   icon={faShieldHalved}
                   styles={styles}
                   FontAwesomeIcon={FontAwesomeIcon}
+                  dataContent="privacy-settings"
                 >
                   Privacy Settings
                 </UserPreferences>
