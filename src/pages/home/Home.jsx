@@ -27,7 +27,7 @@ export default function Home() {
       </Helmet>
       <section
         aria-labelledby="home"
-        className={styles.hero}
+        className={[styles.hero, "section"].join(" ")}
       >
         <div className={styles.textContentWrapper}>
           <h1 id="home" className={styles.heading}></h1>

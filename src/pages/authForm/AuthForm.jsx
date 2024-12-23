@@ -53,7 +53,7 @@ export default function AuthForm() {
         <title>{logIn ? "Log in" : "Sign up"} | VocabVault</title>
       </Helmet>
       <section
-        className={["section", styles.section].join(" ")}
+        className="section"
         aria-labelledby="auth-form-heading"
       >
         <form

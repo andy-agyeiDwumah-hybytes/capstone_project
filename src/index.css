@@ -21,11 +21,18 @@ html {
 body,
 #root {
   margin: 0 auto;
-  max-width: 1800px;
+  max-width: 2200px;
+}
+
+body {
+  background-color: var(--headerFooterColour);
 }
 
 .section {
   background-color: var(--backgroundWhite);
+  /* Important: allows section to take up full height of its parent container */
+  /* Without this it will only expand to fit their content */
+  flex-grow: 1;
 }
 
 a {

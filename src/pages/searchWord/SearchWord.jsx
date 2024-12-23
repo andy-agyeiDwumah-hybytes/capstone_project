@@ -33,7 +33,7 @@ export default function SearchWord() {
         <title>Search | VocabVault</title>
       </Helmet>
       <section
-        className={["section", styles.section].join(" ")}
+        className="section"
         aria-labelledby="search-word-heading"
       >
         <div className={[styles.searchh2Wrapper, "h2Wrapper"].join(" ")}>

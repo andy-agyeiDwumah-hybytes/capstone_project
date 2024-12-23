@@ -1,5 +1,13 @@
 .section {
+    --opacity: 0.9;
     padding-bottom: 5em;
+    background-image: url("../../assets/words_contact.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-image: fill 1 linear-gradient(
+        rgba(255 255 240 / var(--opacity)) 5%,
+        rgba(0 0 0 / var(--opacity)));
 }
 
 .headingWrapper {
@@ -24,22 +32,13 @@
 }
 
 .mainContentWrapper {
+    display: flex;
     overflow: hidden;
     margin: 5rem auto 0;
     box-shadow: 8px 8px 20px rgba(0 0 0 / 1);
-}
+    backdrop-filter: blur(20px);
 
-.overlay {
-    --opacity: 0.9;
-    display: flex;
-    background-image: url("../../assets/words_contact.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-image: fill 1 linear-gradient(
-        rgba(255 255 240 / var(--opacity)) 5%,
-        rgba(0 0 0 / var(--opacity)));
-
-        & > div {
+    & > div {
             flex-grow: 1;
         }
 }
@@ -63,22 +62,30 @@
     text-align: center;
 }
 
-.imageEditProfileWrapper {
-    backdrop-filter: blur(2px);
-}
-
 .editBtn {
-    /* background-color: rgba(101 101 210 / 1); */
     font-size: 1.1rem;
     padding: 0.6em 1.5em;
     box-shadow: 1px 1px 2px var(--black);
     border-radius: 0;
+    border: none;
+    transition-property: background-color border-color color;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    background-color: transparent;
+    outline: 2px solid rgba(101 101 210 / 1);
+    color: var(--white);
+    
+    &:hover {
+        background-color: rgba(101 101 210 / 1);
+        outline: 0;
+        color: var(--black);
+    }
 }
 
 .userPreferenceFlexWrapper {
     display: flex;
     justify-content: space-between;
-    padding: 2em 1em;
+    padding: 2em 2.2em;
     transition: background-color 600ms ease-in;
     border-radius: 5px;
     margin-bottom: 2em;
@@ -129,7 +136,7 @@
 }
 
 @media (width >= 280px) {
-    .overlay {
+    .mainContentWrapper {
         flex-direction: column;
         padding: 5em 0.5em;
     }
@@ -140,7 +147,7 @@
 }
 
 @media (width >= 992px) {
-    .overlay {
+    .mainContentWrapper {
         justify-content: space-around;
         padding: 5em 1.5em;
         flex-direction: row;
@@ -149,5 +156,4 @@
     .editProfileWrapper {
         margin-bottom: 0;
     }
-
 }

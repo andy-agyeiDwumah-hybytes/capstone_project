@@ -55,52 +55,50 @@ export default function UserDetails() {
           </div>
           <hr className={styles.horizontalLine} />
           <div className={styles.mainContentWrapper}>
-            <div className={styles.overlay}>
-              <div className={styles.imageEditProfileWrapper}>
-                <div className={styles.addImageWrapper}>
-                  <button type="button" className={styles.addImageBtn}>
-                    Add image
-                  </button>
-                </div>
-                <div className={styles.editProfileWrapper}>
-                  <button type="button" className={styles.editBtn}>
-                    Edit profile
-                  </button>
-                </div>
+            <div>
+              <div className={styles.addImageWrapper}>
+                <button type="button" className={styles.addImageBtn}>
+                  Add image
+                </button>
               </div>
-              <div className={styles.userDataWrapper}>
-                <UserPreferences
-                  icon={faBookOpenReader}
-                  styles={styles}
-                  FontAwesomeIcon={FontAwesomeIcon}
-                  dataContent="my-learning"
-                >
-                  My learning
-                </UserPreferences>
-                <UserPreferences
-                  icon={faHeart}
-                  styles={styles}
-                  FontAwesomeIcon={FontAwesomeIcon}
-                  dataContent="saved-words"
-                >
-                  Saved Words
-                </UserPreferences>
-                <UserPreferences
-                  icon={faShieldHalved}
-                  styles={styles}
-                  FontAwesomeIcon={FontAwesomeIcon}
-                  dataContent="privacy-settings"
-                >
-                  Privacy Settings
-                </UserPreferences>
-                <div className={styles.deleteAccountWrapper}>
-                  <button
-                    type="button"
-                    className={styles.deleteBtn}
-                    onClick={() => handleDeleteAccount(user.name)}>
-                    Delete account
-                  </button>
-                </div>
+              <div className={styles.editProfileWrapper}>
+                <button type="button" className={styles.editBtn}>
+                  Edit profile
+                </button>
+              </div>
+            </div>
+            <div className={styles.userDataWrapper}>
+              <UserPreferences
+                icon={faBookOpenReader}
+                styles={styles}
+                FontAwesomeIcon={FontAwesomeIcon}
+                dataContent="my-learning"
+              >
+                My learning
+              </UserPreferences>
+              <UserPreferences
+                icon={faHeart}
+                styles={styles}
+                FontAwesomeIcon={FontAwesomeIcon}
+                dataContent="saved-words"
+              >
+                Saved Words
+              </UserPreferences>
+              <UserPreferences
+                icon={faShieldHalved}
+                styles={styles}
+                FontAwesomeIcon={FontAwesomeIcon}
+                dataContent="privacy-settings"
+              >
+                Privacy Settings
+              </UserPreferences>
+              <div className={styles.deleteAccountWrapper}>
+                <button
+                  type="button"
+                  className={styles.deleteBtn}
+                  onClick={() => handleDeleteAccount(user.name)}>
+                  Delete account
+                </button>
               </div>
             </div>
           </div>

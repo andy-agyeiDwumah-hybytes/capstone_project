@@ -34,7 +34,7 @@ export default function Contact() {
       <Helmet>
         <title>Contact | VocabVault</title>
       </Helmet>
-      <section aria-labelledby="contact" className={styles.section}>
+      <section aria-labelledby="contact" className="section">
         <div className="h2Wrapper">
           <h2 id="contact">Contact Us</h2>
         </div>

@@ -1,9 +1,3 @@
-.section {
-    /* Important: allows section to take up full height of its parent container */
-    /* Without this it will only expand to fit their content */
-    flex-grow: 1;
-}
-
 .search {
     margin-bottom: 5rem;
 }
