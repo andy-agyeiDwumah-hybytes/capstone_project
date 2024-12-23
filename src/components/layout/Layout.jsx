@@ -11,8 +11,6 @@ export default function Layout() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [menuIsExpanded, setMenuIsExpanded] = useState(false)
   const { pathname } = useLocation()
-  // Checks whether the hamburger has been clicked or not
-  const [isRotated, setIsRotated] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,27 +25,23 @@ export default function Layout() {
     // Important: Breakpoint must match breakpoint specified in Header.module.css
     if (windowWidth >= 992 && menuIsExpanded) {
       setMenuIsExpanded(false)
-      setIsRotated(false)
     }
   }, [windowWidth, menuIsExpanded])
 
   useEffect(() => {
     // Close menu when pathname changes
     setMenuIsExpanded(false)
-    setIsRotated(false);
   }, [pathname])
 
   const handleClick = () => {
     // Toggle menu state
     setMenuIsExpanded(prev => !prev)
-    setIsRotated(prev => !prev);
   };
 
   return (
     <MenuContext.Provider value={menuIsExpanded}>
       <Header
-        onHandleClick={handleClick}
-        isRotated={isRotated} />
+        onHandleClick={handleClick} />
       <main className="mainWrapper">
         <div>
           <Outlet />

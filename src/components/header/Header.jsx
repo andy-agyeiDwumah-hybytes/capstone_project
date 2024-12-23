@@ -9,7 +9,7 @@ import styles from "./Header.module.css"
 import { UserContext } from "../../context/UserContext"
 import { MenuContext } from "../../context/MenuContext"
 
-export default function Header({ onHandleClick, isRotated }) {
+export default function Header({ onHandleClick }) {
   // Represents the current user
   const { user } = useContext(UserContext)
   // Represents the menu state (if open or closed)
@@ -77,7 +77,8 @@ export default function Header({ onHandleClick, isRotated }) {
         </menu>
       </nav>
       <div
-        className={[styles.hamburger, isRotated ? styles.rotate : styles.restoreRotation].join(" ")}
+        // Rotate hamburger icon if nav menu is expanded on smaller screens
+        className={[styles.hamburger, menuIsExpanded ? styles.rotate : styles.restoreRotation].join(" ")}
         role="button"
         tabIndex="0"
         onClick={onHandleClick}
