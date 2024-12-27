@@ -8,7 +8,6 @@ import {
   faShieldHalved,
 } from "@fortawesome/free-solid-svg-icons"
 // React
-import { Helmet } from "react-helmet-async"
 import { useNavigate } from "react-router"
 import { useContext } from "react"
 // Components
@@ -37,9 +36,9 @@ export default function UserDetails() {
 
   return (
     <>
-      <Helmet>
+      <>
         <title>My details | VocabVault</title>
-      </Helmet>
+      </>
       <section
         aria-labelledby="my-details"
         className={[styles.section, "section"].join(" ")}

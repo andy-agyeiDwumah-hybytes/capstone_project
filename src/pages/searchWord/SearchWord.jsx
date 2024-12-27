@@ -1,5 +1,4 @@
 // React
-import { Helmet } from "react-helmet-async"
 import { useId, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
 // Styles
@@ -29,9 +28,9 @@ export default function SearchWord() {
 
   return (
     <>
-      <Helmet>
+      <>
         <title>Search | VocabVault</title>
-      </Helmet>
+      </>
       <section
         className="section"
         aria-labelledby="search-word-heading"

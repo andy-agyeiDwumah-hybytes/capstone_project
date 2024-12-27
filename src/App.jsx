@@ -5,7 +5,6 @@ import {
   Route,
   RouterProvider,
 } from "react-router"
-import { HelmetProvider } from "react-helmet-async"
 import { useState, useEffect } from "react"
 // Context
 import { UserContext } from "../src/context/UserContext"
@@ -134,10 +133,8 @@ export default function App() {
   }
 
   return (
-    <HelmetProvider>
-      <UserContext value={authContext}>
-        <RouterProvider router={router} />
-      </UserContext>
-    </HelmetProvider>
+    <UserContext value={authContext}>
+      <RouterProvider router={router} />
+    </UserContext>
   )
 }

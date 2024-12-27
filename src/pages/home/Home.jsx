@@ -1,6 +1,5 @@
 // React
-import { Helmet } from "react-helmet-async";
-import {useNavigate } from "react-router"
+import { useNavigate } from "react-router"
 // Styles
 import styles from "./Home.module.css"
 import { useEffect } from "react";
@@ -22,9 +21,9 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
+      <>
         <title>Home | VocabVault</title>
-      </Helmet>
+      </>
       <section
         aria-labelledby="home"
         className={[styles.hero, "section"].join(" ")}

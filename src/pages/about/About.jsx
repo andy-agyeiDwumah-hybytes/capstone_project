@@ -1,14 +1,12 @@
-// React
-import { Helmet } from "react-helmet-async"
 // Styles
 import styles from "./About.module.css"
 
 export default function About() {
     return (
       <>
-        <Helmet>
+        <>
           <title>About | VocabVault</title>
-        </Helmet>
+        </>  
         <section
           aria-labelledby="about"
           className={[styles.section, "section"].join(" ")}

@@ -1,6 +1,5 @@
 // React
 import { useRef, useState } from "react"
-import { Helmet } from "react-helmet-async"
 // Styles
 import styles from "./Contact.module.css"
 // Constants
@@ -31,9 +30,9 @@ export default function Contact() {
 
   return (
     <>
-      <Helmet>
+      <>
         <title>Contact | VocabVault</title>
-      </Helmet>
+      </>
       <section aria-labelledby="contact" className="section">
         <div className="h2Wrapper">
           <h2 id="contact">Contact Us</h2>
