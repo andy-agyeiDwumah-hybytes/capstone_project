@@ -82,7 +82,7 @@ export default function SearchWord() {
               </div>
             ) : (
               // Show content only if fetch was successful
-              wordData?.map((wordResults) => {
+              wordData?.map(wordResults => {
                 const word = wordResults?.["word"]
                   ? wordResults["word"]
                   : "N/A";

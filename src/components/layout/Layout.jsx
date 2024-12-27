@@ -39,15 +39,16 @@ export default function Layout() {
   };
 
   return (
-    <MenuContext.Provider value={menuIsExpanded}>
-      <Header
-        onHandleClick={handleClick} />
+    <>
+      <MenuContext value={menuIsExpanded}>
+        <Header onHandleClick={handleClick} />
+      </MenuContext>
       <main className="mainWrapper">
         <div>
           <Outlet />
         </div>
       </main>
       <Footer />
-    </MenuContext.Provider>
+    </>
   );
 }

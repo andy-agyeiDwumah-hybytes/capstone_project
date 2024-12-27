@@ -82,7 +82,7 @@ export default function Header({ onHandleClick }) {
         role="button"
         tabIndex="0"
         onClick={onHandleClick}
-        onKeyDown={e => handleKeyDown(e)}
+        onKeyDown={handleKeyDown}
       >
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>

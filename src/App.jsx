@@ -135,9 +135,9 @@ export default function App() {
 
   return (
     <HelmetProvider>
-      <UserContext.Provider value={authContext}>
+      <UserContext value={authContext}>
         <RouterProvider router={router} />
-      </UserContext.Provider>
+      </UserContext>
     </HelmetProvider>
   )
 }
