@@ -14,13 +14,14 @@ import { SESSIONKEY, LOCALSTORAGEKEY } from "./constants/Constants"
 import "./components/layout/Layout"
 import Layout from "./components/layout/Layout"
 import Error from "./components/error/Error"
+import PrivateRoutes from "./components/privateRoutes/PrivateRoutes"
+// Pages
 import Home from "./pages/home/Home"
 import About from "./pages/about/About"
 import SearchWord from "./pages/searchWord/SearchWord"
 import Contact from "./pages/contact/Contact"
 import UserDetails from "./pages/userDetails/UserDetails"
 import AuthForm from "./pages/authForm/AuthForm"
-import PrivateRoutes from "./components/privateRoutes/PrivateRoutes"
 
 export default function App() {
   const [user, setUser] = useState(null)
