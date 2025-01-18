@@ -75,12 +75,20 @@
     .paraAndImgWrapper {
         flex-direction: column;
     }
+
+    .aboutImgWrapper {
+        margin-bottom: 3.5em;
+    }
 }
 
 @media (width >= 992px) {
     .paraAndImgWrapper {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .aboutImgWrapper {
+        margin-bottom: 0;
     }
 
     .aboutTextWrapper {
