@@ -88,6 +88,7 @@ export default function AuthForm() {
               </label>
               <input
                 type="email"
+                inputMode="email"
                 id="email"
                 name="email"
                 value={email}
