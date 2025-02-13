@@ -75,7 +75,7 @@
     outline: 2px solid rgba(101 101 210 / 1);
     color: var(--white);
     
-    &:hover {
+    &:hover, &:focus-visible {
         background-color: rgba(101 101 210 / 1);
         outline: 0;
         color: var(--black);
