@@ -46,9 +46,10 @@ export default function SearchWord() {
               aria-label="Search word"
             >
               <input
-                type="text"
+                type="search"
+                inputMode="search"
                 id="search"
-                name="search"
+                name="q"
                 className={styles.searchInput}
                 placeholder="Search a word..."
                 aria-label="Search a word"
