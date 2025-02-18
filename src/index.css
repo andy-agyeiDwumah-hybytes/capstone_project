@@ -58,6 +58,8 @@ button {
   cursor: pointer;
   border-radius: 10px;
   line-height: 2;
+  color: #000;
+  border-color: #000;
 }
 
 /* Keeps footer at the bottom */
