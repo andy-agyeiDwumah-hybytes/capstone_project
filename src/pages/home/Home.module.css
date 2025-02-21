@@ -15,13 +15,42 @@
     font-size: clamp(2.8rem, 10vw, 5.5rem);
     letter-spacing: 5px;
     text-shadow: 1px 1px var(--black);
-    margin-bottom: 0.2em;
+    margin-block-end: 0.4em;
 }
 
 .para {
     font-weight: 800;
     font-size: 1.4rem;
-    margin-bottom: 2.5rem;
+}
+
+.paraNotLoggedIn {
+    margin-block-end: 2.5rem;
+}
+
+.paraWrapperLoggedIn {
+    margin-block-start: 1.2em;
+    margin-inline: auto;
+    width: fit-content;
+    padding-inline: 1em;
+    padding-block: 0.6em;
+    background-color: rgba(from var(--red) r g b / calc(alpha - 0.3));
+    box-shadow: 8px 8px var(--black), 12px 12px 10px var(--white);
+    position: relative;
+    border-radius: 0.5rem;
+
+    ::before {
+        content: open-quote;
+        position: absolute;
+        top: -9rem;
+        left: -1rem;
+        font-size: 8rem;
+    }
+}
+
+.name {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
 }
 
 .heroBtn {
