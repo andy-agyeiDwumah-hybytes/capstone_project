@@ -115,6 +115,21 @@
 
     .aboutImgWrapper {
         margin-block-end: 3.5em;
+        
+        /* Overflows on smaller screens */
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media (width >= 576px) {
+    .aboutImgWrapper {
+        &::before,
+        &::after {
+            display: block;
+        }
     }
 }
 
