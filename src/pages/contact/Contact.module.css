@@ -1,6 +1,7 @@
 .textFormWrapper {
     display: grid;
-    margin: 5rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+    margin-block: 5rem;
     box-shadow: 1px 1px 5px var(--black);
     background-color: #ffe5e5;
 }
@@ -8,10 +9,14 @@
 .textWrapper {
     text-align: center;
     background: #ffe5e5;
+    padding-block: 0.5em;
+    padding-inline: min(10%, 3.5em);
 }
 
 .getInTouchHeading {
     font-size: 2.8rem;
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }
 
 .getInTouchText {
@@ -19,18 +24,18 @@
 }
 
 .formWrapper {
-    padding: 0.5em 0;
-    margin: 0;
+    padding-block: 0.5em;
     background-color: var(--white);
 }
 
 .form {
-    margin: 0 auto;
+    margin-inline: auto;
+    width: min(90%, 500px);
 }
 
 .label {
     display: block;
-    margin-bottom: 0.5em;
+    margin-block-end: 0.5em;
 }
 
 .input, .textarea {
@@ -40,7 +45,7 @@
 }
 
 .input {
-    margin-bottom: 1.5em;
+    margin-block-end: 1.5em;
 }
 
 .label,
@@ -58,11 +63,12 @@
 }
 
 .btnContainer {
-    margin: 2em 0;
+    margin-block: 2em;
 }
 
 .submitBtn {
-    padding: 0.5em 1em;
+    padding-block: 0.5em;
+    padding-inline: 1em;
     font-size: 1.1rem;
     background: linear-gradient(to right, var(--red), var(--white));
     box-shadow: 2px 2px var(--black);
@@ -71,41 +77,13 @@
 }
 
 @media (width >= 280px) {
-    .textFormWrapper {
-        grid-template-columns: repeat(1, minmax(100px, 1fr));
-    }
-    
-    .form {
-        width: 90%;
-    }
-    
-    .formWrapper {
-        border-start-start-radius: 5%;
-        border-start-end-radius: 5%;
-    }
-    
     .textWrapper {
-        padding-inline: 0.5em;
-        margin-bottom: 2em;
+        margin-block-end: 2em;
     }
 }
 
 @media (width >= 992px) {
-    .textFormWrapper {
-        grid-template-columns: repeat(2, minmax(100px, 1fr));
-    }
-    
-    .form {
-        width: 70%;
-    }
-
-    .formWrapper {
-        border-radius: 0;
-        border-start-start-radius: 10%;
-    }
-
     .textWrapper {
-        padding: 0.5em 2em;
-        margin-bottom: 0;
+        margin-block-end: 0;
     }
 }

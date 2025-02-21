@@ -25,7 +25,6 @@ export default function Contact() {
     setName("")
     setEmail("")
     setMessage("")
-    return
   }
 
   return (
@@ -44,7 +43,7 @@ export default function Contact() {
                 className={styles.getInTouchHeading}
                 id="get-in-touch-heading"
               >
-                Get in touch
+                Get In Touch
               </h3>
               <p className={styles.getInTouchText}>
                 Have questions or feedback? We&apos;re here to help! Fill out
@@ -93,6 +92,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    inputMode="email"
                     id="email"
                     name="user_email"
                     value={email}
