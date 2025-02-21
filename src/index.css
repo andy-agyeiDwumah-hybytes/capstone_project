@@ -91,3 +91,15 @@ button {
 .setPaddingInline {
   padding-inline: min(5%, 4em);
 }
+
+@media (width >= 280px) {
+  .setPaddingInlineWide {
+    padding-inline: 0;
+  }
+}
+
+@media (width >= 768px) {
+  .setPaddingInlineWide {
+    padding-inline: 4em;
+  }
+}

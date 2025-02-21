@@ -46,7 +46,7 @@ export default function UserDetails() {
         <div className={[styles.headingWrapper, "h2Wrapper"].join(" ")}>
           <h2 id="my-details">My Details</h2>
         </div>
-        <div className="setPaddingInline">
+        <div className="setPaddingInlineWide">
           <div className={styles.logOutWrapper}>
             <button onClick={() => handleLogOutUser()} className={styles.logoutBtn}>
               Log out

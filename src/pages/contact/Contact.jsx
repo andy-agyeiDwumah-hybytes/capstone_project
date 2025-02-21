@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="h2Wrapper">
           <h2 id="contact">Contact Us</h2>
         </div>
-        <div className="setPaddingInline">
+        <div className="setPaddingInlineWide">
           <div className={styles.textFormWrapper}>
             <div className={styles.textWrapper}>
               <h3
