@@ -29,12 +29,9 @@ export default function AuthForm() {
       success = handleSignUp(name, email, password)
     }
 
-    if (success) {
+    if (!success) return
       navigate("/")
       alert("Logged in succesfully!")
-    } else {
-      return
-    }
   }
 
   const handleClick = () => {

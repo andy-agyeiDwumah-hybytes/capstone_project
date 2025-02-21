@@ -5,18 +5,18 @@ span[aria-label="required"] {
 .authForm {
     border-radius: 10px;
     border: 1px solid var(--black);
-    padding-block: 2.5em;
-    padding-inline: 1.5em;
+    padding-block: 0.5em;
+    padding-inline: 1.6em;
     margin-block: 4em;
     margin-inline: auto;
     box-shadow: 1px 1px 5px var(--black);
     background-color: var(--white);
-    width: min(90%, 600px);
+    width: min(90%, 500px);
 }
 
 .formHeading {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
 }
 
 .authFormLabel {
@@ -26,13 +26,13 @@ span[aria-label="required"] {
 
 .authFormLabel,
 .inputField {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     filter: brightness(90%);
 }
 
 .inputField {
     padding: 0.5em;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     width: 100%;
 }
 
@@ -43,7 +43,6 @@ span[aria-label="required"] {
 .btnContainer {
     display: flex;
     padding-block: 2em;
-    padding-inline: 0;
 }
 
 .btnContainer > button {
