@@ -5,8 +5,10 @@ span[aria-label="required"] {
 .authForm {
     border-radius: 10px;
     border: 1px solid var(--black);
-    padding: 2.5em 1.5em;
-    margin: 4em auto;
+    padding-block: 2.5em;
+    padding-inline: 1.5em;
+    margin-block: 4em;
+    margin-inline: auto;
     box-shadow: 1px 1px 5px var(--black);
     background-color: var(--white);
     width: min(90%, 600px);
@@ -19,7 +21,7 @@ span[aria-label="required"] {
 
 .authFormLabel {
     display: block;
-    margin-bottom: 1em;
+    margin-block-end: 1em;
 }
 
 .authFormLabel,
@@ -35,17 +37,19 @@ span[aria-label="required"] {
 }
 
 .labelInputWrapper {
-    margin-bottom: 1.2em;
+    margin-block-end: 1.2em;
 }
 
 .btnContainer {
     display: flex;
-    padding: 2em 0;
+    padding-block: 2em;
+    padding-inline: 0;
 }
 
 .btnContainer > button {
     font-size: 1.2rem;
-    padding: 0.2em 1em;
+    padding-block: 0.2em;
+    padding-inline: 1em;
     box-shadow: 2px 2px var(--black);
 }
 

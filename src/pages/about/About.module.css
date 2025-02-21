@@ -1,14 +1,17 @@
 .section {
-    padding-bottom: 15em;
+    padding-block-end: 15em;
 }
 
 .abouth2Wrapper {
-    margin-bottom: 6rem;
+    margin-block-end: 6rem;
 }
 
 .paraAndImgWrapper {
     display: flex;
-    margin-bottom: 15rem;
+    margin-block-end: 15rem;
+    /* ! Create a new stacking context to allow before and after content to take effect */
+    /* ! in about image */
+    isolation: isolate;
 }
 
 .aboutImgWrapper {
@@ -18,6 +21,39 @@
     background-repeat: no-repeat;
     height: 25em;
     box-shadow: 6px 6px 20px var(--black);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -2rem;
+        left: -2rem;
+        width: 10em;
+        aspect-ratio: 1;
+        border-radius: 30%;
+        background: conic-gradient(
+            var(--red) 0.25turn,
+            transparent 0.25turn 0.5turn,
+            var(--red) 0.5turn 0.75turn,
+            transparent 0.75turn 1turn);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: -2rem;
+        right: -2rem;
+        width: 10em;
+        aspect-ratio: 1;
+        border-radius: 30%;
+        background: conic-gradient(
+            var(--red) 0.25turn,
+            transparent 0.25turn 0.5turn,
+            var(--red) 0.5turn 0.75turn,
+            transparent 0.75turn 1turn);
+    }
 }
 
 .aboutText {
@@ -31,15 +67,16 @@
 
 .h3ParaWrapper {
     text-align: center;
-    padding: 8em 0;
+    padding-block: 8em;
+    padding-inline: 0;
 }
 
 .h3ParaWrapper[data-content="platform database"] {
-    margin-bottom: 12rem;
+    margin-block-end: 12rem;
 }
 
 .secondaryHeadings {
-    font-size: 3.2rem;
+    font-size: 3rem;
 
     & + p {
         font-size: 1.1rem;
@@ -77,7 +114,7 @@
     }
 
     .aboutImgWrapper {
-        margin-bottom: 3.5em;
+        margin-block-end: 3.5em;
     }
 }
 
@@ -88,7 +125,7 @@
     }
 
     .aboutImgWrapper {
-        margin-bottom: 0;
+        margin-block-end: 0;
     }
 
     .aboutTextWrapper {
