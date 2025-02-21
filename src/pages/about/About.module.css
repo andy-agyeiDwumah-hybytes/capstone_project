@@ -124,7 +124,7 @@
     }
 }
 
-@media (width >= 576px) {
+@media (width >= 768px) {
     .aboutImgWrapper {
         &::before,
         &::after {
