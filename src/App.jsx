@@ -13,7 +13,7 @@ import { SESSIONKEY, LOCALSTORAGEKEY } from "./constants/Constants"
 // Components
 import "./components/layout/Layout"
 import Layout from "./components/layout/Layout"
-import Error from "./components/error/Error"
+import Error from "./pages/error/Error"
 import PrivateRoutes from "./components/privateRoutes/PrivateRoutes"
 // Pages
 import Home from "./pages/home/Home"
@@ -22,6 +22,22 @@ import SearchWord from "./pages/searchWord/SearchWord"
 import Contact from "./pages/contact/Contact"
 import UserDetails from "./pages/userDetails/UserDetails"
 import AuthForm from "./pages/authForm/AuthForm"
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="login" element={<AuthForm />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      <Route element={<PrivateRoutes />}>
+        <Route path="search" element={<SearchWord />} />
+        <Route path="userdetails" element={<UserDetails />} />
+      </Route>
+      <Route path="*" element={<Error />} />
+    </Route>
+  )
+)
 
 export default function App() {
   const [user, setUser] = useState(null)
@@ -104,33 +120,12 @@ export default function App() {
     localStorage.setItem(LOCALSTORAGEKEY, JSON.stringify([...updatedUsers]))
   }
 
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<Layout />} errorElement={<Error />}>
-        <Route index element={<Home />} />
-        <Route
-          path="login"
-          element={<AuthForm />}
-        />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route element={<PrivateRoutes />}>
-          <Route path="search" element={<SearchWord />} />
-          <Route
-            path="userdetails"
-            element={<UserDetails />}
-          />
-        </Route>
-      </Route>
-    )
-  )
-
   const authContext = {
     user,
     handleLogin,
     handleSignUp,
     handleLogOut,
-    handleRemoveUserFromLocalStorage
+    handleRemoveUserFromLocalStorage,
   }
 
   return (

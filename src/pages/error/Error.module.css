@@ -1,12 +1,13 @@
 .errorWrapper {
     display: grid;
     place-items: center;
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 .errorText {
     font-size: 2rem;
-    color: var(--white);
+    text-align: center;
+    text-wrap: balance;
 }
 
 .errorLink {

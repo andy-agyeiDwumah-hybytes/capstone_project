@@ -15,7 +15,7 @@
 .resultsContainer {
     display: grid;
     padding-bottom: 10em;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 675px), 1fr));
 
     & > div {
         padding: 2em;
